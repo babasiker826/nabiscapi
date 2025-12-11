@@ -1496,77 +1496,109 @@ def raw_sonuc():
 def ana_sayfa():
     html = """
     <!DOCTYPE html>
-    <html>
-    <head>
-        <title>🤖 Telegram Bot API</title>
-        <meta charset="utf-8">
-        <style>
-            body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
-            .container { max-width: 1000px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-            h1 { color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
-            .status { background: #28a745; color: white; padding: 10px; border-radius: 5px; margin: 20px 0; }
-            .category { background: #e9ecef; padding: 15px; border-radius: 5px; margin: 15px 0; }
-            .endpoint { margin: 5px 0; padding: 5px 10px; background: #f8f9fa; border-left: 4px solid #007bff; }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h1>🤖 Telegram Bot API</h1>
-            <div class="status">
-                <h2>✅ API'ler Aktif</h2>
-                <p>Toplam 80+ sorgu API'sı çalışıyor</p>
-            </div>
-            
-            <div class="category">
-                <h3>📊 YENİ API SORGULARI</h3>
-                <div class="endpoint">/isyeriSektoru?ad=EYMEN&soyad=YAVUZ&tc=41722376226</div>
-                <div class="endpoint">/iseGirisTarihi?ad=EYMEN&soyad=YAVUZ&tc=41722376226</div>
-                <div class="endpoint">/isyeriUnvani?ad=EYMEN&soyad=YAVUZ&tc=41722376226</div>
-                <div class="endpoint">/guncelAdres?ad=EYMEN&soyad=YAVUZ&tc=41722376226</div>
-                <div class="endpoint">/tcplaka?tc=36940052076</div>
-                <div class="endpoint">/tcyeni?tc=41722376226</div>
-                <div class="endpoint">/adyeni?ad=EYMEN&soyad=YAVUZ</div>
-                <div class="endpoint">/gsmyeni?gsm=5344429507</div>
-            </div>
-            
-            <div class="category">
-                <h3>🪪 VESİKA SORGULARI</h3>
-                <div class="endpoint">/vesika?tc=12345678901</div>
-                <div class="endpoint">/vesika_download?tc=12345678901</div>
-            </div>
-            
-            <div class="category">
-                <h3>💰 IBAN SORGULARI</h3>
-                <div class="endpoint">/iban_sorgulama?iban=TR330006100519786457841326</div>
-                <div class="endpoint">/iban_dogrulama?iban=TR330006100519786457841326</div>
-            </div>
-            
-            <div class="category">
-                <h3>👨‍👩‍👧‍👦 AİLE SORGULARI</h3>
-                <div class="endpoint">/kardes?tc=12345678901</div>
-                <div class="endpoint">/anne?tc=12345678901</div>
-                <div class="endpoint">/baba?tc=12345678901</div>
-                <div class="endpoint">/cocuklar?tc=12345678901</div>
-                <div class="endpoint">/amca?tc=12345678901</div>
-                <div class="endpoint">/dayi?tc=12345678901</div>
-                <div class="endpoint">/yetimlik?babatc=41947368754</div>
-            </div>
-            
-            <div class="category">
-                <h3>🔍 SAHMARAN BOTU</h3>
-                <div class="endpoint">/sorgu?ad=EYMEN&soyad=YAVUZ</div>
-                <div class="endpoint">/aile?tc=12345678901</div>
-                <div class="endpoint">/sulale?tc=12345678901</div>
-                <div class="endpoint">/tcgsm?tc=12345678901</div>
-                <div class="endpoint">/gsmtc?gsm=5344429507</div>
-                <div class="endpoint">/adres?tc=12345678901</div>
-            </div>
-            
-            <p><strong>📍 API URL:</strong> {request.host_url}</p>
-            <p><em>Tüm API'ler JSON formatında yanıt döndürür</em></p>
+<html>
+<head>
+    <title>🤖 NABINI APİSİNİN?</title>
+    <meta charset="utf-8">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container { 
+            max-width: 800px; 
+            margin: 20px; 
+            background: white; 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            border: 5px solid #ff4757;
+        }
+        
+        h1 { 
+            color: #ff4757; 
+            font-size: 3em;
+            text-shadow: 3px 3px 0 #000;
+            margin-bottom: 20px;
+        }
+        
+        .warning {
+            background: #ff4757;
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            border: 3px solid #000;
+            box-shadow: 5px 5px 0 #000;
+        }
+        
+        .message {
+            background: #f1f2f6;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 1.2em;
+            line-height: 1.6;
+            border: 2px solid #000;
+        }
+        
+        .vip-only {
+            background: #ffd32a;
+            color: #000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 25px 0;
+            font-weight: bold;
+            border: 3px dashed #ff4757;
+            font-size: 1.3em;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #666;
+            font-style: italic;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚠️ NABINI APİSİNİN?</h1>
+        
+        <div class="warning">
+            <h2>🚫 VIP DEĞİLSİN AMK 🚫</h2>
+            <p>Sen VIP olmadığın şekilde VIP apilere ulaşmaya mı çalışıyorsun?</p>
         </div>
-    </body>
-    </html>
+        
+        <div class="message">
+            <p><strong>APTAL OROSPU ÇOCUĞU!</strong></p>
+            <p>Bu ne cüret? VIP apilere erişim için önce VIP üye olman gerekiyor!</p>
+            <p>Bedava peşindesin ama bu işler böyle yürümüyor kardeşim!</p>
+        </div>
+        
+        <div class="vip-only">
+            <p>💎 <strong>VIP APİLER SADECE VIP ÜYELERE AİTTİR!</strong> 💎</p>
+            <p>Para yoksa API de yok! Anladın mı?</p>
+        </div>
+        
+        <div class="footer">
+            <p>KDKDKDIXIDJ 🤣🤣🤣</p>
+            <p>© 2024 - Gerçek API'ler sadece para verenlere</p>
+        </div>
+    </div>
+</body>
+</html>
     """
     resp = make_response(html)
     resp.headers['Content-Type'] = 'text/html; charset=utf-8'
