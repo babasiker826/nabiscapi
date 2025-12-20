@@ -43,7 +43,7 @@ SAHMARAN_BOT = "@SorguPanelliiiBot"
 # YENİ API CREDENTIALS
 NEW_API_USERNAME = "test_user"
 NEW_API_PASSWORD = "test123"
-NEW_API_BASE = "http://198.37.105.83/api.php"
+NEW_API_BASE = "http://176.65.151.198/api.php"
 
 # IBAN API URL
 IBAN_API_BASE = "https://hesapno.com/mod_iban_coz"
