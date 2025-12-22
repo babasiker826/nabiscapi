@@ -38,7 +38,7 @@ loop = None
 
 # Botlar
 VESIKA_BOT = "@VesikaBot"
-SAHMARAN_BOT = "@SorguPanelliiiBot"
+SAHMARAN_BOT = "@TurkiyeSorguPaneliBot"
 
 # YENİ API CREDENTIALS
 NEW_API_USERNAME = "test_user"
